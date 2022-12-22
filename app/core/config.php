@@ -8,11 +8,11 @@
  * @package app
  * 
  */
-
 $theme = 'simple';
-$pass_length = 6;
-$app_name = 'CCMF';
-$app_color = 'rgba(00, 66, 33, 0)';
+$pass_length  = 6; /* min value: 6 */
+$app_name = 'CMF'; 
+$app_color = 'rgba(00, 66, 33, 0)'; /* rgba */
+$debug = true;
 
 if($_SERVER['SERVER_NAME'] === "localhost") {
     $dbhost = 'localhost';
@@ -36,6 +36,9 @@ define('DBDRVR', $dbdrvr);
 define('PASS_LENGTH', $pass_length);
 define('APP_NAME', $app_name);
 define('APP_COLOR', $app_color);
+define('DEBUG', $debug);
 define('ROOT', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/' . trim($_SERVER['SCRIPT_NAME'], '/index.php'));
 define('THEME', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/' . trim($_SERVER['SCRIPT_NAME'], '/index.php') . '/themes/' . $theme);
 define('ATHEME', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/' . trim($_SERVER['SCRIPT_NAME'], '/index.php') . '/themes/admin');
+
+ini_set('display_errors', $debug);

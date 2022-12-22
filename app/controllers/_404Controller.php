@@ -11,6 +11,9 @@
 
  class _404 extends Controller {
     public function index() {
-        echo "_404 Controller -> index Method";
+
+        $this->view('404');
+
     }
+
 }
