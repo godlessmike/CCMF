@@ -9,6 +9,10 @@
  * 
  */
 
+spl_autoload_register(function($className){
+   require "../app/models/" . ucfirst($className) . "Model.php";
+});
+
 require "config.php";
 require "functions.php";
 require "Database.php";

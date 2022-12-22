@@ -14,3 +14,8 @@ function show(mixed $content) {
    var_dump($content);
    echo "</pre>";
 }
+
+function esc(string $string) {
+   return htmlspecialchars($string);
+}
+
