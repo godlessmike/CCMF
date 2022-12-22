@@ -1,5 +1,5 @@
 <?php
-
+namespace Controllers;
 defined('ROOTPATH') OR die('ACCES DENIED');
 
 /**
@@ -12,7 +12,7 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  */
 
 class _404 {
-     use Core\Controller;
+     use Controller;
     public function index() {
 
         $this->view('404');

@@ -11,7 +11,10 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  * 
  */
 
+ 
 spl_autoload_register(function($className){
+   $className = explode('\\', $className);
+   $className = end($className);
    require "../app/models/" . ucfirst($className) . "Model.php";
 });
 

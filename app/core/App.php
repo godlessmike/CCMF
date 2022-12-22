@@ -36,7 +36,8 @@ class App {
             $this->controller = "_404";
         }
 
-        $callback = new $this->controller;
+        
+        $callback = new ("\controllers\\" . $this->controller);
 
         if(!empty($URL[1])) {
             if(method_exists($callback, $URL[1])) {

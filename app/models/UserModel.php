@@ -1,5 +1,7 @@
 <?php
 
+namespace Models;
+
 defined('ROOTPATH') OR die('ACCES DENIED');
 
 /**
@@ -7,13 +9,13 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  * 
  * @author Michał Borowiec <michal@cursed.pl>
  * @version 1.0 
- * @package app/model
+ * @package Model\USerModel
  * 
  */
 
 class User {
+    use Model;
 
-    use Core\Model;
     protected string $table = 'test';
     protected array $columns = [
         'age',

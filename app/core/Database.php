@@ -1,6 +1,6 @@
 <?php
 
-namespace Core;
+namespace Models;
 
 defined('ROOTPATH') OR die('ACCES DENIED');
 
@@ -12,7 +12,7 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  * @package Core\Database
  * 
  */
-
+use \PDO;
 trait Database {
     private function dbConnect() {
         $connection = new PDO(DBDRVR . ":hostname=" . DBHOST . ";dbname=" . DBNAME, DBUSER, DBPASS);

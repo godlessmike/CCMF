@@ -1,5 +1,7 @@
 <?php
 
+namespace Controllers;
+
 defined('ROOTPATH') OR die('ACCES DENIED');
 
 /**
@@ -12,7 +14,7 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  */
 
 class Home {
-    use Core\Controller;
+    use Controller;
     public function index() {
         $this->view('home');
 
