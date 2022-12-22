@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 defined('ROOTPATH') OR die('ACCES DENIED');
 
 /**
@@ -11,7 +13,7 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  * 
  */
 
-class Controller {
+trait Controller {
     public function view($view) {
         $file = "../app/views/" . $view . "View.php";
         if(file_exists($file)) {

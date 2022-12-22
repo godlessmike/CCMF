@@ -64,11 +64,11 @@ function paginationVars() : array {
 function message(string $message, bool $clear) : mixed {
    $session = new Core\Session();
    if(!empty($message)) {
-      $session->setSession('message', $message);
-   } elseif(!empty($session->getSession('message'))) {
-      $message = $session->getSession('message');
+      $session->sessionSet('message', $message);
+   } elseif(!empty($session->sessionGet('message'))) {
+      $message = $session->sessionGet('message');
       if($clear) {
-         $session->clearSession('message');
+         $session->sessionClear('message');
       }
       return $message;
    }

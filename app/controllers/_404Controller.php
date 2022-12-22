@@ -10,8 +10,9 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  * @package app/controller
  * 
  */
+use \Core\Controller;
 
- class _404 extends Controller {
+ class _404 {
     public function index() {
 
         $this->view('404');
