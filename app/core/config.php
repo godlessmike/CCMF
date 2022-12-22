@@ -15,6 +15,7 @@ $pass_length  = 6; /* min value: 6 */
 $app_name = 'CMF'; 
 $app_color = 'rgba(00, 66, 33, 0)'; /* rgba */
 $debug = true;
+$minPHPVersion = 8.0;
 
 if($_SERVER['SERVER_NAME'] === "localhost") {
     $dbhost = 'localhost';
@@ -42,5 +43,9 @@ define('DEBUG', $debug);
 define('ROOT', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/' . trim($_SERVER['SCRIPT_NAME'], '/index.php'));
 define('THEME', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/' . trim($_SERVER['SCRIPT_NAME'], '/index.php') . '/themes/' . $theme);
 define('ATHEME', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['SERVER_NAME'] . '/' . trim($_SERVER['SCRIPT_NAME'], '/index.php') . '/themes/admin');
+
+if(phpversion() < $minPHPVersion) {
+    die ("Invalid PHP version (" . phpversion() . " instead $minPHPVersion)");
+}
 
 ini_set('display_errors', $debug);
