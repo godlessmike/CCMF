@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+define('ROOTPATH', __DIR__ . DIRECTORY_SEPARATOR);
+
 /**
  * Main App File
  * 
@@ -9,7 +12,6 @@
  * 
  */
 
-session_start();
 require '../app/core/autoload.php';
 
 $app = new App;

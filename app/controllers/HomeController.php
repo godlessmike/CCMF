@@ -1,5 +1,7 @@
 <?php
 
+defined('ROOTPATH') OR die('ACCES DENIED');
+
 /**
  * Home Controller
  * 

@@ -1,5 +1,7 @@
 <?php
 
+defined('ROOTPATH') OR die('ACCES DENIED');
+
 /**
  * _404 Controller
  * 
