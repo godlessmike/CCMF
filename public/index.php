@@ -14,5 +14,5 @@ define('ROOTPATH', __DIR__ . DIRECTORY_SEPARATOR);
 
 require '../app/core/autoload.php';
 
-$app = new App;
+$app = new App\App;
 $app->run();

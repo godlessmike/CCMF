@@ -9,7 +9,7 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  * 
  * @author Michał Borowiec <michal@cursed.pl>
  * @version 1.0 
- * @package app
+ * @package Core\Session
  * 
  */
 

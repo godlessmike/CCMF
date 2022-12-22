@@ -1,5 +1,7 @@
 <?php
 
+namespace App;
+
 defined('ROOTPATH') OR die('ACCES DENIED');
 
 /**

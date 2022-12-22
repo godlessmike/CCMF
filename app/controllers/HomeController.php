@@ -10,9 +10,9 @@ defined('ROOTPATH') OR die('ACCES DENIED');
  * @package app/controller
  * 
  */
-use \Core\Controller;
 
 class Home {
+    use Core\Controller;
     public function index() {
         $this->view('home');
 

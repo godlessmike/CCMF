@@ -13,7 +13,7 @@ defined('ROOTPATH') OR die('ACCES DENIED');
 
 class User {
 
-    use Model;
+    use Core\Model;
     protected string $table = 'test';
     protected array $columns = [
         'age',
